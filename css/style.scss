@@ -1,0 +1,507 @@
+/*Color Variables */
+$color-main: #2E364F;
+$color-text-bg-light: black ;
+$color-text-bg-dark: white ;
+
+* {
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box ;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif ;
+    color: $color-text-bg-light;
+    font-size: 1.1rem;
+}
+
+a {
+    font-weight: bold ;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none ;
+    color: $color-text-bg-dark ;
+    transition: 0.3s;
+}
+
+h1 {
+    color: $color-text-bg-light ;
+    font-family: 'Fira Sans', sans-serif ;
+    text-transform: uppercase;
+}
+
+h4 {
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px ;
+}
+
+img {
+    width: 100% ;
+}
+
+p {
+    &:last-child {
+        margin-top: 20px ;
+    }
+    
+}
+
+.container {
+    max-width: 1100px ;
+    padding: 0 2rem ;
+    margin: auto ;
+}
+
+.site-header {
+    height: 75px ;
+    background-color: $color-main ;
+   
+    
+    .nav {
+        font-size: 1.2rem ;
+        margin: auto auto;
+        
+    }
+
+    .container {
+        display: grid ;
+        grid-template-columns: (repeat(2, 1fr));
+    }
+
+    h1 {
+        margin: auto 0;
+        text-transform: lowercase ;
+    }
+
+    .menu {
+        list-style: none ;
+        text-transform: uppercase ;
+
+        display: flex ;
+        flex-direction: row ;
+        align-items: center ;
+        justify-content: center ;
+        justify-self: flex-end ;
+
+    }
+
+    .nav-item {
+        padding: 25px ;
+    }
+
+    a {
+        &:hover {
+            color: rgba(255, 255, 255, 0.733) ;
+        }
+    }
+
+}
+
+.section-showcase {
+    
+    height: 655px ;
+    background-color: $color-main ;
+    color: $color-text-bg-dark !important;
+
+    .section-content {
+        height: 100% ;
+        display: flex ;
+        flex-direction: column ;
+        justify-content: center ;
+
+    }
+
+    h1 {
+        color: $color-text-bg-dark ;
+        font-size: 5rem ;
+        text-transform: initial;
+        
+    }
+
+    a {
+        color: $color-text-bg-dark ;
+        text-transform: uppercase ;
+        font-weight: 400 ;
+        padding: 10px ;
+        border: white solid 2px ;
+        display: inline-block ;
+
+        &:hover {
+            background-color: white;
+            color: $color-main ;
+        }
+        
+    }
+
+    p {
+        margin-bottom: 30px ;
+        margin-top: 30px ;
+    }
+    
+}
+
+.section-events {
+    width: 100% ;
+    height: 500px ;
+    background-color: white ;
+    color: $color-text-bg-light;
+    display: block ;
+
+    h1 {
+        text-transform: uppercase ;
+        padding: 15px 0; /*check this */
+        /*margin: 15px 0 ; check this */
+    }
+
+    .btn {
+        display: inline-block ;
+        margin-top: 20px;
+    }
+
+    a {
+        color: $color-text-bg-light ;
+        text-transform: uppercase ;
+        font-weight: 400 ;
+        padding: 5px ;
+        border: black solid 1px ;
+        
+
+        &:hover {
+            background-color: black;
+            color: white ;
+        }
+    }
+
+    .heading-flex-container {
+        height: 20% ;
+        display: flex ;
+        justify-content: space-between;
+        margin-top: 15px ;
+        margin-bottom: 15px ;
+        
+    }
+
+    .event-photo-grid-container {
+        height: 80%;
+        display: grid ;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px 0;
+        grid-gap: 8% ;
+    }
+
+    .grid-column {
+        height: 100%;   
+    }
+
+    .event-thumbnail {
+        height: 250px ;
+    }
+
+
+}
+
+.section-about {
+    width: 100% ;
+    height: 500px ;
+    /*background-color: black ;*/
+    background-image: url(../img/close-up-electric-guitar.jpg);
+    background-size: cover;
+    background-position: center;
+    color: $color-text-bg-dark ;
+    display: block ;
+
+    position: relative ;
+    z-index: 1 ;
+
+    &:after {
+        content: '';
+        background-color: rgba(0, 0, 0, 0.705);
+        top: 0;
+        left: 0 ;
+        position: absolute ;
+        display: block ;
+        width: 100% ;
+        height: 100% ;
+        z-index: 10;
+
+    }
+
+    .container {
+        margin-top: 15px 0;
+        height: 100% ;
+    }
+
+    h1 {
+        color: $color-text-bg-dark ;
+        text-transform: uppercase ;
+        padding: 15px 0; 
+    }
+
+    .section-content {
+        height: 100% ;
+        display: flex ;
+        flex-direction: column;
+        position: relative;
+        z-index: 100;
+        
+        
+    }
+
+    .heading-flex-container {
+        height: 20% ;
+        display: flex ;
+        align-items: center;
+        margin-top: 15px ;
+        margin-bottom: 15px ;
+            
+        }
+    
+
+    .flex-container {
+        height: 80% ;
+        width: 100% ;
+        display: flex ;
+        flex-direction: column ;
+        margin-bottom: 15px ;
+        
+    }
+
+    p {
+        width: 100% ;
+        flex-direction: row;
+        font-size: 1.3rem ;
+        
+        padding-bottom: 20px ;
+    }
+
+    div.btn {
+        display: inherit ;
+        margin-top: 20px;
+        
+    }
+
+    a {
+        color: $color-text-bg-dark ;
+        text-transform: uppercase ;
+        font-weight: 400 ;
+        padding: 10px ;
+        border: white solid 2px ;
+        display: inline-block ;
+
+        &:hover {
+            background-color: white;
+            color: black ;
+        }
+    }
+}
+
+.section-subscribe {
+    width: 100% ;
+    height: 350px ;
+    background-color: white;
+    color: $color-text-bg-light ;
+    display: block ;
+
+    .container {
+        margin-top: 15px 0;
+        height: 100% ;
+    }
+
+    h1 {
+        
+        text-transform: uppercase ;
+        padding: 15px 0; 
+    }
+
+    .section-content {
+        height: 100% ;
+        display: flex ;
+        flex-direction: column;
+        
+        
+    }
+
+    .heading-flex-container {
+        height: 20% ;
+        display: flex ;
+        align-items: center;
+        justify-content: center ;
+        margin-top: 15px ;
+        margin-bottom: 15px ;
+            
+        }
+    
+
+    .flex-container {
+        height: 80% ;
+        /*width: 100% ;*/
+        display: flex ;
+        flex-direction: column ;
+        justify-content: center ;
+        align-items: center ;
+        margin-bottom: 15px ;
+        text-align: center ;
+        
+    }
+
+    p {
+        width: 100% ;
+        /*flex-direction: column;
+        align-items: center ;*/
+        font-size: 1.3rem ;
+        
+        padding-bottom: 20px ;
+    }
+
+    div.btn {
+        display: inherit ;
+        margin-top: 20px;
+        position: relative ;
+        z-index: 10 ;
+        
+    }
+
+    a {
+        color: $color-text-bg-light;
+        text-transform: uppercase ;
+        font-weight: 400 ;
+        padding: 10px ;
+        border: black solid 2px ;
+        display: inline-block ;
+
+        &:hover {
+            background-color: black;
+            color: white ;
+        }
+    }
+}
+
+.section-watch {
+    width: 100% ;
+    height: 450px ;
+    background-image: url(../img/architecture-auditorium.jpg) ;
+    background-size: cover;
+    background-position: center;
+    color: $color-text-bg-dark ;
+    display: block ;
+
+    .container {
+        margin-top: 15px 0;
+        height: 100% ;
+    }
+
+    h1 {
+        
+        text-transform: uppercase ;
+        padding: 15px 0; 
+        color: white;
+    }
+
+    .section-content {
+        height: 100% ;
+        display: flex ;
+        flex-direction: column;
+        
+        
+    }
+
+    .heading-flex-container {
+        height: 20% ;
+        display: flex ;
+        align-items: center;
+        justify-content: center ;
+        margin-top: 15px ;
+        margin-bottom: 15px ;
+            
+        }
+    
+
+    .flex-container {
+        height: 80% ;
+        /*width: 100% ;*/
+        display: flex ;
+        flex-direction: column ;
+        justify-content: center ;
+        align-items: center ;
+        margin-bottom: 50px ;
+        text-align: center ;
+        
+    }
+
+
+    div.btn {
+        display: inherit ;
+        position: relative ;
+        z-index: 10 ;
+        
+    }
+
+
+    i {
+        color: white ;
+    }
+}
+
+/* FOOTER */
+.footer {
+    width: 100% ;
+    height: 400px ;
+    background-color: $color-main;
+    color: $color-text-bg-dark ;
+    display: block ;
+
+    .container {
+        margin-top: 15px 0;
+        height: 100% ;
+    }
+
+    h5 {
+        
+        text-transform: uppercase ;
+        padding: 15px 0; 
+    }
+
+    .section-content {
+        height: 100% ;
+        display: flex ;
+        flex-direction: column;
+        
+        
+    }
+
+    .flex-container {
+        height: 80% ;
+        width: 100% ;
+        display: flex ;
+        flex-direction: column ;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px ;
+        margin-top: 30px ;
+        
+    }
+
+    p {
+        width: 100% ;
+        flex-direction: row;
+        font-size: 1rem ;
+        padding-bottom: 20px ;
+    }
+}
+
+/* Responsive Rules */
+$breakpoint-tablet: 768px ;
+
+@media(max-width: $breakpoint-tablet) {
+    
+    .event-photo-grid-container {
+        display: grid ;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+
+
+
+}
