@@ -11,22 +11,51 @@ $color-text-bg-dark: white ;
 
 body {
     font-family: 'Open Sans', sans-serif ;
-    color: $color-text-bg-light;
-    font-size: 1.1rem;
+    /*color: $color-text-bg-light;*/
+    font-size: 1.1em;
 }
 
 a {
     font-weight: bold ;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none ;
-    color: $color-text-bg-dark ;
+    text-transform: uppercase ;
+    /* padding: 10px ;*/
     transition: 0.3s;
 }
+
+.btn-light-bg {
+    color: $color-text-bg-light ;
+    border: $color-text-bg-light solid 2px ;
+    font-weight: 400 ;
+    padding: 10px ;
+
+    &:hover {
+        background-color: black ;
+        color: white ;
+    }
+}
+
+.btn-dark-bg {
+    color: $color-text-bg-dark ;
+    border: $color-text-bg-dark solid 2px;
+    font-weight: 400 ;
+
+    &:hover {
+        background-color: white ;
+        color: black ;
+    }
+}
+
 
 h1 {
     color: $color-text-bg-light ;
     font-family: 'Fira Sans', sans-serif ;
     text-transform: uppercase;
+}
+
+.nav-logo {
+    text-transform: lowercase ;
 }
 
 h4 {
@@ -70,7 +99,7 @@ p {
 
     h1 {
         margin: auto 0;
-        text-transform: lowercase ;
+        text-transform: lowercase;
     }
 
     .menu {
@@ -90,6 +119,7 @@ p {
     }
 
     a {
+        color: $color-text-bg-dark ;
         &:hover {
             color: rgba(255, 255, 255, 0.733) ;
         }
@@ -113,21 +143,16 @@ p {
 
     h1 {
         color: $color-text-bg-dark ;
-        font-size: 5rem ;
+        font-size: 5em ;
         text-transform: initial;
         
     }
 
     a {
-        color: $color-text-bg-dark ;
-        text-transform: uppercase ;
-        font-weight: 400 ;
         padding: 10px ;
-        border: white solid 2px ;
         display: inline-block ;
 
         &:hover {
-            background-color: white;
             color: $color-main ;
         }
         
@@ -159,17 +184,7 @@ p {
     }
 
     a {
-        color: $color-text-bg-light ;
-        text-transform: uppercase ;
-        font-weight: 400 ;
-        padding: 5px ;
-        border: black solid 1px ;
-        
-
-        &:hover {
-            background-color: black;
-            color: white ;
-        }
+        padding: 10px ;
     }
 
     .heading-flex-container {
@@ -203,7 +218,7 @@ p {
 .section-about {
     width: 100% ;
     height: 500px ;
-    /*background-color: black ;*/
+    
     background-image: url(../img/close-up-electric-guitar.jpg);
     background-size: cover;
     background-position: center;
@@ -242,9 +257,7 @@ p {
         display: flex ;
         flex-direction: column;
         position: relative;
-        z-index: 100;
-        
-        
+        z-index: 100;   
     }
 
     .heading-flex-container {
@@ -270,8 +283,8 @@ p {
         width: 100% ;
         flex-direction: row;
         font-size: 1.3rem ;
-        
         padding-bottom: 20px ;
+        
     }
 
     div.btn {
@@ -281,17 +294,8 @@ p {
     }
 
     a {
-        color: $color-text-bg-dark ;
-        text-transform: uppercase ;
-        font-weight: 400 ;
         padding: 10px ;
-        border: white solid 2px ;
         display: inline-block ;
-
-        &:hover {
-            background-color: white;
-            color: black ;
-        }
     }
 }
 
@@ -334,7 +338,6 @@ p {
 
     .flex-container {
         height: 80% ;
-        /*width: 100% ;*/
         display: flex ;
         flex-direction: column ;
         justify-content: center ;
@@ -345,10 +348,10 @@ p {
     }
 
     p {
-        width: 100% ;
-        /*flex-direction: column;
-        align-items: center ;*/
-        font-size: 1.3rem ;
+        width: 90% ;
+        flex-direction: column;
+        align-items: center ;
+        font-size: 1.3em ;
         
         padding-bottom: 20px ;
     }
@@ -362,17 +365,8 @@ p {
     }
 
     a {
-        color: $color-text-bg-light;
-        text-transform: uppercase ;
-        font-weight: 400 ;
         padding: 10px ;
-        border: black solid 2px ;
         display: inline-block ;
-
-        &:hover {
-            background-color: black;
-            color: white ;
-        }
     }
 }
 
@@ -436,7 +430,6 @@ p {
         
     }
 
-
     i {
         color: white ;
     }
@@ -495,10 +488,29 @@ $breakpoint-tablet: 768px ;
 
 @media(max-width: $breakpoint-tablet) {
     
+    body {
+        font-size: 2vw ;
+
+        p {
+            font-size: 3vw ;
+        }
+
+        a {
+            font-size: 3vw ;
+        }
+    }
+
+
     .event-photo-grid-container {
-        display: grid ;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        display: flex ;
+        flex-direction: column ;
+        background-color: pink ;
+    }
+
+    .grid-column {
+        display: flex ;
+        flex-direction: column ;
+        width: 100%;
     }
 
 

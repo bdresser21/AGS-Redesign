@@ -8,23 +8,51 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: black;
-  font-size: 1.1rem;
+  /*color: $color-text-bg-light;*/
+  font-size: 1.1em;
 }
 
 a {
   font-weight: bold;
   font-family: 'Open Sans', sans-serif;
   text-decoration: none;
-  color: white;
+  text-transform: uppercase;
+  /* padding: 10px ;*/
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.btn-light-bg {
+  color: black;
+  border: black solid 2px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.btn-light-bg:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn-dark-bg {
+  color: white;
+  border: white solid 2px;
+  font-weight: 400;
+}
+
+.btn-dark-bg:hover {
+  background-color: white;
+  color: black;
 }
 
 h1 {
   color: black;
   font-family: 'Fira Sans', sans-serif;
   text-transform: uppercase;
+}
+
+.nav-logo {
+  text-transform: lowercase;
 }
 
 h4 {
@@ -92,6 +120,10 @@ p:last-child {
   padding: 25px;
 }
 
+.site-header a {
+  color: white;
+}
+
 .site-header a:hover {
   color: rgba(255, 255, 255, 0.733);
 }
@@ -118,21 +150,16 @@ p:last-child {
 
 .section-showcase h1 {
   color: white;
-  font-size: 5rem;
+  font-size: 5em;
   text-transform: initial;
 }
 
 .section-showcase a {
-  color: white;
-  text-transform: uppercase;
-  font-weight: 400;
   padding: 10px;
-  border: white solid 2px;
   display: inline-block;
 }
 
 .section-showcase a:hover {
-  background-color: white;
   color: #2E364F;
 }
 
@@ -162,16 +189,7 @@ p:last-child {
 }
 
 .section-events a {
-  color: black;
-  text-transform: uppercase;
-  font-weight: 400;
-  padding: 5px;
-  border: black solid 1px;
-}
-
-.section-events a:hover {
-  background-color: black;
-  color: white;
+  padding: 10px;
 }
 
 .section-events .heading-flex-container {
@@ -207,7 +225,6 @@ p:last-child {
 .section-about {
   width: 100%;
   height: 500px;
-  /*background-color: black ;*/
   background-image: url(../img/close-up-electric-guitar.jpg);
   background-size: cover;
   background-position: center;
@@ -294,17 +311,8 @@ p:last-child {
 }
 
 .section-about a {
-  color: white;
-  text-transform: uppercase;
-  font-weight: 400;
   padding: 10px;
-  border: white solid 2px;
   display: inline-block;
-}
-
-.section-about a:hover {
-  background-color: white;
-  color: black;
 }
 
 .section-subscribe {
@@ -353,7 +361,6 @@ p:last-child {
 
 .section-subscribe .flex-container {
   height: 80%;
-  /*width: 100% ;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -372,10 +379,15 @@ p:last-child {
 }
 
 .section-subscribe p {
-  width: 100%;
-  /*flex-direction: column;
-        align-items: center ;*/
-  font-size: 1.3rem;
+  width: 90%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3em;
   padding-bottom: 20px;
 }
 
@@ -387,17 +399,8 @@ p:last-child {
 }
 
 .section-subscribe a {
-  color: black;
-  text-transform: uppercase;
-  font-weight: 400;
   padding: 10px;
-  border: black solid 2px;
   display: inline-block;
-}
-
-.section-subscribe a:hover {
-  background-color: black;
-  color: white;
 }
 
 .section-watch {
@@ -540,13 +543,34 @@ p:last-child {
 
 /* Responsive Rules */
 @media (max-width: 768px) {
+  body {
+    font-size: 2vw;
+  }
+  body p {
+    font-size: 3vw;
+  }
+  body a {
+    font-size: 3vw;
+  }
   .event-photo-grid-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: (1fr)[3];
-        grid-template-rows: repeat(3, 1fr);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: pink;
+  }
+  .grid-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
