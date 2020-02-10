@@ -197,15 +197,17 @@ p {
     }
 
     .event-photo-grid-container {
-        height: 80%;
+        /*height: 80%;*/
         display: grid ;
         grid-template-columns: repeat(3, 1fr);
-        padding: 20px 0;
-        grid-gap: 8% ;
+        margin: 25px 0;
+        gap: 8% ;
+        background-color: pink ;
     }
 
     .grid-column {
-        height: 100%;   
+        height: 100%;  
+        background-color: plum ; 
     }
 
     .event-thumbnail {
@@ -217,7 +219,7 @@ p {
 
 .section-about {
     width: 100% ;
-    height: 500px ;
+    height: 600px ;
     
     background-image: url(../img/close-up-electric-guitar.jpg);
     background-size: cover;
@@ -282,7 +284,7 @@ p {
     p {
         width: 100% ;
         flex-direction: row;
-        font-size: 1.3rem ;
+        font-size: 1.3em ;
         padding-bottom: 20px ;
         
     }
@@ -301,10 +303,10 @@ p {
 
 .section-subscribe {
     width: 100% ;
-    height: 350px ;
+    min-height: 400px ;
     background-color: white;
     color: $color-text-bg-light ;
-    display: block ;
+    display: block;
 
     .container {
         margin-top: 15px 0;
@@ -352,7 +354,6 @@ p {
         flex-direction: column;
         align-items: center ;
         font-size: 1.3em ;
-        
         padding-bottom: 20px ;
     }
 
@@ -478,7 +479,7 @@ p {
     p {
         width: 100% ;
         flex-direction: row;
-        font-size: 1rem ;
+        font-size: 1em ;
         padding-bottom: 20px ;
     }
 }
@@ -489,28 +490,37 @@ $breakpoint-tablet: 768px ;
 @media(max-width: $breakpoint-tablet) {
     
     body {
-        font-size: 2vw ;
-
-        p {
-            font-size: 3vw ;
-        }
-
-        a {
-            font-size: 3vw ;
-        }
+        font-size: 2.5vw ;
     }
+
+    p {
+        font-size: 3vw ;
+    }
+
+    a {
+        font-size: 3vw ;
+    }
+    
 
 
     .event-photo-grid-container {
-        display: flex ;
-        flex-direction: column ;
+        display: grid ;
+        width: 100% ;
+        height: 100%;
+        grid-template-columns: 1fr ;
+        /*grid-template-rows: repeat(3, 1fr);*/
         background-color: pink ;
     }
 
     .grid-column {
-        display: flex ;
-        flex-direction: column ;
         width: 100%;
+        height: 10% ;
+        grid-template-rows: repeat(3, 1fr) ;
+        background-color: plum ;
+    }
+
+    .section-about {
+        min-height: 800px ;
     }
 
 
